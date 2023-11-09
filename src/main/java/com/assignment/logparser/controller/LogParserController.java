@@ -12,6 +12,7 @@ public class LogParserController {
     @RequestMapping(value = "uniqueIPAddresses", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseBody getUniqueIPAddresses() {
         return null;
+        
     }
 
 }
