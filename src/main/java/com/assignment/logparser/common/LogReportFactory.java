@@ -61,6 +61,9 @@ public class LogReportFactory {
             case "FILE":
                 writerInterface = fileWriter;
                 break;
+            case "CONSOLE":
+                writerInterface = null;//TBD consoleWriter()
+                break;
         }
     }
 
@@ -75,7 +78,8 @@ public class LogReportFactory {
         } catch (ApplicationException e) {
             logger.logErrorWithException(e.getLOG(), e.getMessage(), e);
         } catch (Exception e) {
-            logger.logErrorWithException(LOG, e.getMessage(), e);
+            String message = "An error occurred while generating log report";
+            logger.logErrorWithException(LOG, message, e);
         }
     }
 

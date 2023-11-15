@@ -27,7 +27,7 @@ public class ReportDataGenerator {
     @Autowired
     private ReportLogger logger;
 
-    private List<String> getUniqueIPAddresses() {
+    List<String> getUniqueIPAddresses() {
         List<String> uniqueIps = new ArrayList<>();
         final List<LogObject> uniqueList = logs.stream().distinct().collect(Collectors.toList());
         uniqueList.forEach(item -> uniqueIps.add(item.getIpAddress()));

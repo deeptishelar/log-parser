@@ -20,7 +20,7 @@ public class RegExScanner implements DataScannerInterface {
     private static final String URL_REGEX = "\"(GET|POST|DELETE|PUT|PATCH)( +)/(.*?)\"";
     private static final String DATE_TIME_REGEX = "\\[\\d./[a-z]*/\\d.*?]";
     private static final String IPADDRESS_REGEX = "(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})";
-    private static final String FILTER = "GET|POST|HTTP/1.1|\"";
+    private static final String FILTER = "GET|POST|DELETE|PUT|PATCH|HTTP/1.1|\"";
     @Autowired
     ReportLogger logger;
 
