@@ -30,8 +30,9 @@ The design considers and adheres to **SOLID** principles in Java
    and maintaining the lifestyle
 
 **Please note:**
-_This program facilitates several modes of input, output and parsing. The program righ-now supports FILE mode and
-RegularExpressions for parsing. However, the provision is made to support DBMode for input and output, different modes
+_This program facilitates several modes of input, output and parsing. The program right-now supports FILE mode and
+RegularExpressions for parsing. However, the provision is made to support DBMode for input and console output, different
+modes
 of parsing like using SPLIT of Strings mechanism if the requirement need be. Use of appropriate configuration in
 application.properties and interface implementations is highly recommended while supporting the future requirements._
 
@@ -50,7 +51,7 @@ Below is the code coverage as per Intellij:
 
 Assumptions:
 
-1. The program reads one log file from given location and generates output file and places it at the same location. The
+1. The program reads one log file from given location and generates output file and places it the given location. The
    file location and file names are to be configured in application properties file.
 2. Currently, the program is configured as below in application.properties file.
    logparser.inputmode=FILE
@@ -129,14 +130,14 @@ Prerequisites: Ensure the following is installed:
 4. Enhanced Report Generation : this program generates basic text file for the report. Enhancements can be added by
    subclassing the core class
 5. UML diagram could have been more professional.
-6. The current report is a plain text file, it can be enhanced to look pretty.
 
 Contact
 Deepti Sardiwal - deepti.shelar@gmail.com
 
 Project Link: https://github.com/deeptishelar/log-parser
 
-Acknowledgments
+**Acknowledgments**
+
 Sources I find helpful and would like to give credit to. I've included a few of my favorites
 to kick things off!
 https://www.baeldung.com/spring-dependency-injection
