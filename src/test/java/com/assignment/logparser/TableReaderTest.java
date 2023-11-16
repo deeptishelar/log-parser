@@ -21,6 +21,6 @@ public class TableReaderTest {
     @Test
     void testScan() {
         Throwable exception = Assertions.assertThrows(ApplicationException.class, () -> reader.readInput());
-        Assertions.assertNotEquals(exception.getMessage().indexOf("not supported"), -1);
+        Assertions.assertEquals(exception.getMessage(), "This reader is not supported");
     }
 }

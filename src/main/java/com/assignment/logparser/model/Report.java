@@ -5,6 +5,9 @@ import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * object for output
+ */
 @AllArgsConstructor
 @Getter
 public class Report {

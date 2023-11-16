@@ -39,7 +39,7 @@ public class LogFIleReaderTest {
     @Test
     void testReadInput() throws IOException {
         final List<String> strings = logFileReader.readInput();
-        Assertions.assertEquals(strings.size(), 4);
+        Assertions.assertEquals(strings.size(), 23);
     }
 
     @Test

@@ -13,11 +13,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * parsing based on regular expressions
+ */
 @Component
 public class RegExScanner implements DataScannerInterface {
 
     private static final Logger LOG = LoggerFactory.getLogger(RegExScanner.class);
-    private static final String URL_REGEX = "\"(GET|POST|DELETE|PUT|PATCH)( +)/(.*?)\"";
+    private static final String URL_REGEX = "\"(GET|POST|PUT|DELETE|PATCH).+?\"";
     private static final String DATE_TIME_REGEX = "\\[\\d./[a-z]*/\\d.*?]";
     private static final String IPADDRESS_REGEX = "(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})";
     private static final String FILTER = "GET|POST|DELETE|PUT|PATCH|HTTP/1.1|\"";

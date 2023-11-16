@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * maps to Log data The equals hashcode are overridden to supprt sorting
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter

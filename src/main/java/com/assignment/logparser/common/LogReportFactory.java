@@ -16,6 +16,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * This is the backnone of the program It does the following: 1. Reads the application.propertoes file and build
+ * parserConfig object 2. Instantiates appropriate classes for reading, writing and parsing 3. Calls to generate report
+ * data
+ * <p>
+ * Please note the TBD below are to be developed in future. Base/core version is in working condition
+ */
 @Service
 public class LogReportFactory {
 
@@ -36,7 +43,9 @@ public class LogReportFactory {
     @Autowired
     ReportLogger logger;
 
-    //    @PostConstruct
+    /**
+     * instantiates the appropriate components
+     */
     public void init() {
         if (config == null) {
             throw new ApplicationException("Error creating configuration", LOG, new RuntimeException());
@@ -67,7 +76,9 @@ public class LogReportFactory {
         }
     }
 
-
+    /**
+     * calls methods for configured components
+     */
     public void generateReport() {
         logger.info(LOG, "Logs Report operation Started ... ");
         try {

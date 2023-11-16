@@ -44,7 +44,7 @@ public class ReportDataGenerator {
         List<String> topList = new ArrayList<>();
         List<Entry<String, List<LogObject>>> results = new ArrayList<>(map.entrySet());
         Collections.sort(results, new LogDataComparator());
-        int topCount = Integer.parseInt(parserConfig.getTopcount());
+        int topCount = parserConfig.getTopcount();
         topCount = topCount < results.size() ? topCount : results.size();
         final List<Entry<String, List<LogObject>>> entries = results.subList(0, topCount);
         for (var entry : entries) {

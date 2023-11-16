@@ -5,6 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+/**
+ * main application to kick-start the factory. responsible to run the program
+ */
 @SpringBootApplication
 public class LogParserApplication {
 

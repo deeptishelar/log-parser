@@ -17,6 +17,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * this component reads the input log file and generates a list of strings
+ */
 @Component
 public class LogFileReader implements InputReaderInterface {
 

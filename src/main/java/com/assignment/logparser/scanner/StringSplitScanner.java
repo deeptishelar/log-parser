@@ -7,6 +7,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * TBD can be developed to support parsing based on string split technique
+ */
 public class StringSplitScanner implements DataScannerInterface {
 
     private static final Logger LOG = LoggerFactory.getLogger(StringSplitScanner.class);

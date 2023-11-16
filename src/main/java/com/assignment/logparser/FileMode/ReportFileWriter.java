@@ -15,6 +15,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * Writes report to a file in plain text format This class can be extended to create rich text reports
+ */
 @Component
 public class ReportFileWriter implements WriterInterface {
 

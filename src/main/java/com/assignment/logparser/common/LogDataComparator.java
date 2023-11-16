@@ -5,6 +5,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map.Entry;
 
+/**
+ * This class is called when we do list operations like grouping, sorting on the LogObjects
+ */
 public class LogDataComparator implements Comparator<Entry<String, List<LogObject>>> {
 
     /**

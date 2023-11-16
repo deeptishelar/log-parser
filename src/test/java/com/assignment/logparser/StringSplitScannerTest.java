@@ -21,7 +21,7 @@ public class StringSplitScannerTest {
     @Test
     void testScan() {
         Throwable exception = Assertions.assertThrows(ApplicationException.class, () -> scanner.scan(null));
-        Assertions.assertNotEquals(exception.getMessage().indexOf("not supported"), -1);
+        Assertions.assertEquals(exception.getMessage(), "This scanner is not supported");
 
 
     }

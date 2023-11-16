@@ -3,6 +3,9 @@ package com.assignment.logparser.exception;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
 
+/**
+ * Logs appropriate messages at all levels
+ */
 @Component
 public class ReportLogger {
 

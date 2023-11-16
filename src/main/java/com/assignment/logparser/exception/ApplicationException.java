@@ -3,6 +3,9 @@ package com.assignment.logparser.exception;
 import lombok.Getter;
 import org.slf4j.Logger;
 
+/**
+ * Custom exception handler Not doping much at this time, but can be of help as the app grows
+ */
 @Getter
 public class ApplicationException extends RuntimeException {
 
