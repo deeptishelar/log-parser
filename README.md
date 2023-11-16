@@ -87,7 +87,7 @@ Prerequisites: Ensure the following is installed:
 3. Build the project : **your_location/log-parser>mvn clean install site -P test** (this step compiles the code, builds
    and executes the junit test cases)
 4. The jacoco code coverage report can be found at : **your_location/log-parser/target/site/jacoco/index.html**
-5. Start the spring boot app : **your_location/log-parser>mvn Spring-boot:run** the program execution logs are printed
+5. Start the spring boot app : **your_location/log-parser>mvn spring-boot:run** the program execution logs are printed
    console as shown below.
 6. The output report can be found at location specified in application.properties file for **logparser.outputpath**
    ![img_1.png](img_1.png)
