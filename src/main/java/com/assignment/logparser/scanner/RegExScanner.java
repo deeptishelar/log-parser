@@ -23,7 +23,7 @@ public class RegExScanner implements DataScannerInterface {
     private static final String URL_REGEX = "\"(GET|POST|PUT|DELETE|PATCH).+?\"";
     private static final String DATE_TIME_REGEX = "\\[\\d./[a-z]*/\\d.*?]";
     private static final String IPADDRESS_REGEX = "(\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})";
-    private static final String FILTER = "GET|POST|DELETE|PUT|PATCH|HTTP/1.1|\"";
+    private static final String FILTER = "GET|POST|DELETE|PUT|PATCH|HTTP/1.1|HTTP/2|HTTP/3|HTTPS|\"";
     @Autowired
     ReportLogger logger;
 
@@ -36,6 +36,7 @@ public class RegExScanner implements DataScannerInterface {
         Matcher m = p.matcher(text);
         while (m.find()) {
             final String match = m.group();
+
             final String filteredURL = match.replaceAll(filter, "");
             extractedString = filteredURL.trim();
         }

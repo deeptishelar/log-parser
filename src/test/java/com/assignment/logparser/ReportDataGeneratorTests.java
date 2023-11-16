@@ -11,11 +11,9 @@ import com.assignment.logparser.model.Report;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.rules.ExpectedException;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -23,8 +21,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class ReportDataGeneratorTests {
 
-    @Rule
-    public final ExpectedException exception = ExpectedException.none();
     @InjectMocks
     ReportDataGenerator generator;
     @Mock

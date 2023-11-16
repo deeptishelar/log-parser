@@ -32,5 +32,6 @@ public class ParserConfig {
     private int topcount;
     private String inputfilepath;
     private String inputfilename;
+    private String outputfilename;
     private String outputpath;
 }

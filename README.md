@@ -7,9 +7,10 @@ Java v17,
 Spring v6,
 Maven v3.9.4,
 Spring Boot v3,
-Junit v4,
-Mockito (For mocking objects in Junits)
-jacoco (for Test Reports)
+Junit v5,
+Lombok,
+Mockito (For mocking objects in Junits),
+jacoco (for Test Reports) etc
 
 **Design considerations:**
 
@@ -71,9 +72,14 @@ This program works as follows for the above configuration:
 5. The logparser.topcount=3 property states that the output data is asked for top 3 (e.g: top 3 active IP addresses
    etc.)
 
-**Steps to run the program on macOS:**
+Prerequisites: Ensure the following is installed:
 
-1. Clone the git repository : **<your_location>git clone https://github.com/deeptishelar/log-parser**
+1. Java 17 (https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html),
+2. maven v3.9.4 (https://maven.apache.org/download.cgi)
+
+**Installation (Steps to run the program on macOS):**
+
+1. Clone the git repository: **<your_location>git clone https://github.com/deeptishelar/log-parser**
 2. Get inside the project directory: **cd your_location/log-parser**
 3. Place the log file under **your_location/log-parser/src/main/resources/logs** or any location of your choice
 3. Ensure the application.properties file under **src/main/resources** is updated with appropriate fileName and path
@@ -87,7 +93,8 @@ This program works as follows for the above configuration:
 
 **Best Practices followed:**
 
-1. _**Flexibility**_ : No hard codings in the code. Extensive use of configuration makes it flexible.
+1. **Use of latest versions and libraries**
+2. _**Flexibility**_ : No hard codings in the code. Extensive use of configuration makes it flexible.
    application.properties file offers place for all configurations. The modes can be changed in future without touching
    the actual code.
 2. _**monitoring, troubleshooting, exception handling and debugging**_ : logging is enabled with excellent
@@ -124,3 +131,15 @@ This program works as follows for the above configuration:
 5. UML diagram could have been more professional.
 6. The current report is a plain text file, it can be enhanced to look pretty.
 
+Contact
+Deepti Sardiwal - deepti.shelar@gmail.com
+
+Project Link: https://github.com/deeptishelar/log-parser
+
+Acknowledgments
+Sources I find helpful and would like to give credit to. I've included a few of my favorites
+to kick things off!
+https://www.baeldung.com/spring-dependency-injection
+https://www.baeldung.com/junit-5-migration
+https://dzone.com/articles/use-mockito-mock-autowired
+https://www.umletino.com/umletino.html

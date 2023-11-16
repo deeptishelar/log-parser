@@ -8,6 +8,9 @@ import com.assignment.logparser.model.Report;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -40,16 +43,18 @@ public class ReportFileWriter implements WriterInterface {
         }
         final Map<String, List<String>> content = data.getContent();
 
-        String outputFileName = config.getOutputpath() + "Report_" + config.getInputfilename();
+        String outputFileName = config.getOutputpath() + config.getOutputfilename();
         FileWriter fileWriter = null;
         PrintWriter printWriter = null;
         try {
+            Path path = Paths.get(outputFileName);
+            Files.deleteIfExists(path);
             fileWriter = new FileWriter(outputFileName);
             printWriter = new PrintWriter(fileWriter);
-            printWriter.print("Log Report");
+            printWriter.print("Log Report\n");
             PrintWriter finalPrintWriter = printWriter;
             content.forEach((k, v) ->
-                finalPrintWriter.printf("\n<span><b> %s </b></span>--> %s \n", k, String.join("\n", v))
+                finalPrintWriter.printf("\n%s \n%s \n", k, String.join("\n", v))
             );
             printWriter.close();
             logger.info(LOG, "Report printed successfully to the output file -> " + outputFileName);

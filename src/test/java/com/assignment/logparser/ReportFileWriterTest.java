@@ -32,7 +32,7 @@ public class ReportFileWriterTest {
     void init() {
         MockitoAnnotations.initMocks(this);
         when(this.parserConfig.getOutputpath()).thenReturn("src/test/resources/logs/");
-        when(this.parserConfig.getInputfilename()).thenReturn("sample_report.txt");
+        when(this.parserConfig.getOutputfilename()).thenReturn("sample_report.txt");
 
     }
 
@@ -44,7 +44,7 @@ public class ReportFileWriterTest {
         content.put("Question 1", rows);
         Report report = new Report(content);
         reportFileWriter.writeData(report);
-        File file = new File(parserConfig.getOutputpath() + "Report_sample_report.txt");
+        File file = new File(parserConfig.getOutputpath() + parserConfig.getOutputfilename());
         Assertions.assertTrue(file.exists());
     }
 
