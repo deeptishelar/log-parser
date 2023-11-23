@@ -54,6 +54,7 @@ public class LogFIleReaderTest {
         when(this.parserConfig.getInputfilename()).thenReturn("sample1.log");
         ApplicationException exception = Assertions.assertThrows(ApplicationException.class,
             () -> logFileReader.readInput());
+        Assertions.assertEquals(exception.getMessage().indexOf("File not found with given name and location"), 0);
     }
 
 }

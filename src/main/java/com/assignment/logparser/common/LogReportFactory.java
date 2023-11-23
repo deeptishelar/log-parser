@@ -17,11 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * This is the backnone of the program It does the following: 1. Reads the application.propertoes file and build
+ * This is the backbone of the program It does the following: 1. Reads the application.properties file and builds
  * parserConfig object 2. Instantiates appropriate classes for reading, writing and parsing 3. Calls to generate report
  * data
  * <p>
- * Please note the TBD below are to be developed in future. Base/core version is in working condition
+ * Please note the TBD below are to be developed in the future. Base/core version is in working condition
  */
 @Service
 public class LogReportFactory {
